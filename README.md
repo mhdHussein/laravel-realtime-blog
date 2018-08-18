@@ -1,1 +1,2 @@
-# An app built with laravel , vuejs and pusher
+# laravel-realtime-blog
+a blog designed using laravel , pusher and vuejs
