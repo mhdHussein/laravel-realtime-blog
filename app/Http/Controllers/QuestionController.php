@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Http\Resources\QuestionResource;
 
+
 class QuestionController extends Controller
 {
     /**
@@ -46,17 +47,7 @@ class QuestionController extends Controller
         return new QuestionResource($question);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Model\Question  $question
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Question $question)
-    {
-        //
-    }
-
+  
     /**
      * Update the specified resource in storage.
      *
@@ -66,7 +57,9 @@ class QuestionController extends Controller
      */
     public function update(Request $request, Question $question)
     {
-        //
+        $question->update($request->all());
+
+        return response($question , Response::HTTP_ACCEPTED);
     }
 
     /**
