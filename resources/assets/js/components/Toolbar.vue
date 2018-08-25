@@ -3,12 +3,14 @@
     <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
     <v-toolbar-title>Md Questions</v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn flat>Forum</v-btn>
+    <div class="hidden-sm-and-down">
+      <v-btn flat >Forum</v-btn>
       <v-btn flat>Ask Question</v-btn>
       <v-btn flat>Categories</v-btn>
-      <v-btn flat>Login</v-btn>
-    </v-toolbar-items>
+      <router-link to="/login">
+        <v-btn flat>Login</v-btn>
+      </router-link>
+    </div>
   </v-toolbar>
 </template>
 <script>
