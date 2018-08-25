@@ -11,8 +11,13 @@ window.Vue = require('vue');
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import router from './router/router.js'; 
-Vue.use(Vuetify)
 
+
+Vue.use(Vuetify)
+import User from './helpers/User';
+
+window.User = User;
+console.log(User.id());
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

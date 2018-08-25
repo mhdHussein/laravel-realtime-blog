@@ -22,7 +22,9 @@
     </v-container>
 </template>
 <script>
+
 export default {
+    
     data(){
         return {
             form :{
@@ -33,9 +35,7 @@ export default {
     },
     methods : {
         login(){
-            axios.post('/api/auth/login' , this.form)
-            .then(res => console.log(res.data))
-            .catch(err => console.error(err.response.data));
+           User.login(this.form);
         }
     }
 }
