@@ -25,6 +25,7 @@ class ReplyController extends Controller
      */
     public function index(Question $question)
     {
+        
         return response(ReplyResource::collection($question->replies) , Response::HTTP_OK);
     }
 

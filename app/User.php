@@ -54,6 +54,8 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
+    // set FieldName Attribute
+    // this modifies a field before inserting the data to the database
     public function setPasswordAttribute($value){
 
         $this->attributes['password'] = bcrypt($value); 
