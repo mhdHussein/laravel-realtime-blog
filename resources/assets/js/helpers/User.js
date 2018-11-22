@@ -14,10 +14,13 @@ class User {
     }
 
     responseAfterLogin(data){
+   
         const token = data.access_token;
+   
         const user = data.user;
         if(Token.isValid(token)){
             AppStorage.store(token , user);
+            window.location = '/forum';
         }
     }
 
@@ -36,6 +39,7 @@ class User {
 
     logout(){
         AppStorage.clear();
+        window.location = '/forum';
         
     }
 
