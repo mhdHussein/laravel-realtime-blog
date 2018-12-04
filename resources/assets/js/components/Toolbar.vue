@@ -3,6 +3,7 @@
     <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
     <v-toolbar-title>Md Questions</v-toolbar-title>
     <v-spacer></v-spacer>
+    <app-notifications></app-notifications>
     <div class="hidden-sm-and-down">
       
       <router-link 
@@ -17,8 +18,9 @@
   </v-toolbar>
 </template>
 <script>
+import AppNotifications from './AppNotifications';
 export default {
-
+  components : {AppNotifications},
   data() {
     return {
       items : [
